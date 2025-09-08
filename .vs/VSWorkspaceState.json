@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\OrganizedScannAPI.Api",
+    "\\src\\OrganizedScannAPI.Api\\Controllers",
+    "\\src\\OrganizedScannAPI.Application",
+    "\\src\\OrganizedScannAPI.Application\\obj",
+    "\\src\\OrganizedScannAPI.Application\\obj\\Release",
+    "\\src\\OrganizedScannAPI.Domain",
+    "\\src\\OrganizedScannAPI.Infrastructure",
+    "\\src\\OrganizedScannAPI.Infrastructure\\Repositories"
+  ],
+  "SelectedNode": "\\src\\OrganizedScannAPI.Api\\appsettings.Development.json",
+  "PreviewInSolutionExplorer": false
+}

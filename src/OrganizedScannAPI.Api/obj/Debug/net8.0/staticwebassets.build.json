@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "LC9EVNXFGugL0t2LKSAVqhEYyEgeGKu7Adttx1XkXko=",
+  "Source": "OrganizedScannAPI.Api",
+  "BasePath": "_content/OrganizedScannAPI.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

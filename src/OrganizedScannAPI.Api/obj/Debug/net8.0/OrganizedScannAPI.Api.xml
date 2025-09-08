@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrganizedScannAPI.Api</name>
+    </assembly>
+    <members>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcycleController.GetAll(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Retorna todas as motocicletas, podendo filtrar por marca e ano.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcycleController.GetById(System.Int32)">
+            <summary>
+            Retorna motocicleta pelo ID.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcycleController.Create(OrganizedScannApi.Domain.Entities.Motorcycle)">
+            <summary>
+            Cria uma nova motocicleta.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcycleController.Update(System.Int32,OrganizedScannApi.Domain.Entities.Motorcycle)">
+            <summary>
+            Atualiza uma motocicleta existente.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcycleController.Delete(System.Int32)">
+            <summary>
+            Deleta uma motocicleta pelo ID.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.PortalController.ListSummary">
+            <summary>
+            Retorna resumo das motocicletas por portal.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Deleta usuário pelo ID (apenas ADMIN).
+            </summary>
+        </member>
+    </members>
+</doc>
