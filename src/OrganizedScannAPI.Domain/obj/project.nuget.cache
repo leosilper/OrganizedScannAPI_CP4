@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YB9UKcwrzDE=",
+  "dgSpecHash": "0cf12liGV/U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj": {}
+    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj": {
+    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj",
+        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj",
         "projectName": "OrganizedScannAPI.Api",
-        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj",
+        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Api\\OrganizedScannAPI.Api.csproj",
         "packagesPath": "C:\\Users\\leo10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Api\\obj\\",
+        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj"
+              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj"
               },
-              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj"
+              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj"
               }
             }
           }
@@ -51,19 +51,27 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "AspNetCore.HealthChecks.MongoDb": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.1, )"
             },
-            "Microsoft.EntityFrameworkCore.Relational": {
+            "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -89,18 +97,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj": {
+    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj",
         "projectName": "OrganizedScannAPI.Application",
-        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj",
+        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Application\\OrganizedScannAPI.Application.csproj",
         "packagesPath": "C:\\Users\\leo10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Application\\obj\\",
+        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -121,11 +129,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj"
+              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj"
               },
-              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj"
+              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj"
               }
             }
           }
@@ -140,7 +148,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -153,14 +161,6 @@
             "Mapster": {
               "target": "Package",
               "version": "[7.4.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -179,18 +179,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj": {
+    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj",
         "projectName": "OrganizedScannAPI.Domain",
-        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\leo10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -223,7 +223,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -244,18 +244,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj": {
+    "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj",
         "projectName": "OrganizedScannAPI.Infrastructure",
-        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\OrganizedScannAPI.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\leo10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -276,8 +276,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI.Refactor\\OrganizedScannAPI.Refactor\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj"
+              "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\leo10\\Downloads\\OrganizedScannAPI\\src\\OrganizedScannAPI.Domain\\OrganizedScannAPI.Domain.csproj"
               }
             }
           }
@@ -292,35 +292,23 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "AspNetCore.HealthChecks.MongoDb": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.1, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[9.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Relational": {
+            "MongoDB.Driver": {
               "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Oracle.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.23.80, )"
+              "version": "[2.25.0, )"
             }
           },
           "imports": [
@@ -339,7 +327,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

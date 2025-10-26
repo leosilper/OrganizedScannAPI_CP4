@@ -29,14 +29,59 @@
             Deleta uma motocicleta pelo ID.
             </summary>
         </member>
-        <member name="M:OrganizedScannApi.Api.Controllers.PortalController.ListSummary">
+        <member name="T:OrganizedScannApi.Api.Controllers.MotorcyclesV2Controller">
             <summary>
-            Retorna resumo das motocicletas por portal.
+            Controller V2 - Motorcycles com funcionalidades estendidas
             </summary>
         </member>
-        <member name="M:OrganizedScannApi.Api.Controllers.UserController.Delete(System.Int32)">
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcyclesV2Controller.GetAll(System.String,System.Nullable{System.Int32})">
             <summary>
-            Deleta usuário pelo ID (apenas ADMIN).
+            Retorna todas as motocicletas, podendo filtrar por marca e ano (V2).
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcyclesV2Controller.GetById(System.Int32)">
+            <summary>
+            Retorna motocicleta pelo ID (V2).
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.MotorcyclesV2Controller.Create(OrganizedScannApi.Domain.Entities.Motorcycle)">
+            <summary>
+            Cria uma nova motocicleta (V2).
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.PortalController.GetAll">
+            <summary>
+            Retorna todos os portais.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.PortalController.GetById(System.Int64)">
+            <summary>
+            Retorna portal pelo ID.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.PortalController.Create(OrganizedScannApi.Domain.Entities.Portal)">
+            <summary>
+            Cria um novo portal.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.UserController.GetAll">
+            <summary>
+            Retorna todos os usuários.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.UserController.GetById(System.Int64)">
+            <summary>
+            Retorna usuário pelo ID.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.UserController.Create(OrganizedScannApi.Domain.Entities.User)">
+            <summary>
+            Cria um novo usuário.
+            </summary>
+        </member>
+        <member name="M:OrganizedScannApi.Api.Controllers.UserController.Delete(System.Int64)">
+            <summary>
+            Deleta usuário pelo ID.
             </summary>
         </member>
     </members>
