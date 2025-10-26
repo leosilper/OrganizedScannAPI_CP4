@@ -1,35 +1,59 @@
-using Microsoft.AspNetCore.Http;
-﻿// Controllers/UserController.cs
 using Microsoft.AspNetCore.Mvc;
-using OrganizedScannApi.Infrastructure.Data;
-using System.Threading.Tasks;
+using OrganizedScannApi.Domain.Repositories;
 
 namespace OrganizedScannApi.Api.Controllers
 {
     [ApiController]
     [Produces("application/json")]
-    [Route("api/users")]
-        public class UserController : ControllerBase
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
+    public class UserController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUserRepository _repository;
 
-        public UserController(ApplicationDbContext context) => _context = context;
+        public UserController(IUserRepository repository) => _repository = repository;
 
         /// <summary>
-        /// Deleta usuário pelo ID (apenas ADMIN).
+        /// Retorna todos os usuários.
         /// </summary>
-        [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            var user = await _context.Users.FindAsync(id);
+            var users = await _repository.GetAllAsync();
+            return Ok(users);
+        }
+
+        /// <summary>
+        /// Retorna usuário pelo ID.
+        /// </summary>
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(long id)
+        {
+            var user = await _repository.GetByIdAsync(id);
+            if (user == null) return NotFound();
+            return Ok(user);
+        }
+
+        /// <summary>
+        /// Cria um novo usuário.
+        /// </summary>
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] OrganizedScannApi.Domain.Entities.User user)
+        {
+            await _repository.AddAsync(user);
+            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
+        }
+
+        /// <summary>
+        /// Deleta usuário pelo ID.
+        /// </summary>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(long id)
+        {
+            var user = await _repository.GetByIdAsync(id);
             if (user == null) return NotFound();
 
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-
+            await _repository.DeleteAsync(id);
             return NoContent();
         }
     }

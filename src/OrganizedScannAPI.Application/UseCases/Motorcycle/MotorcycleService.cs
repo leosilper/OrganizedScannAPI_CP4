@@ -1,59 +1,52 @@
-﻿// Services/MotorcycleService.cs
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using OrganizedScannApi.Infrastructure.Data;
 using OrganizedScannApi.Domain.Entities;
+using OrganizedScannApi.Domain.Repositories;
 
-namespace OrganizedScannApi.Application.UseCases.Motorcycles // <- PLURAL
+namespace OrganizedScannApi.Application.UseCases.Motorcycles
 {
     public class MotorcycleService
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IMotorcycleRepository _repository;
 
-        public MotorcycleService(ApplicationDbContext context)
+        public MotorcycleService(IMotorcycleRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<List<Motorcycle>> GetAllAsync(string? brand = null, int? year = null)
         {
-            IQueryable<Motorcycle> query = _context.Motorcycles.AsQueryable();
+            var allMotorcycles = await _repository.GetAllAsync();
+            var motorcycles = allMotorcycles.ToList();
 
             if (!string.IsNullOrWhiteSpace(brand))
-                query = query.Where(m => m.Brand == brand);
+                motorcycles = motorcycles.Where(m => m.Brand == brand).ToList();
 
             if (year.HasValue)
-                query = query.Where(m => m.Year == year.Value);
+                motorcycles = motorcycles.Where(m => m.Year == year.Value).ToList();
 
-            return await query.ToListAsync();
+            return motorcycles;
         }
 
         public async Task<Motorcycle?> GetByIdAsync(int id) =>
-            await _context.Motorcycles.FindAsync(id);
+            await _repository.GetByIdAsync(id);
 
         public async Task<Motorcycle> CreateAsync(Motorcycle motorcycle)
         {
-            _context.Motorcycles.Add(motorcycle);
-            await _context.SaveChangesAsync();
+            await _repository.AddAsync(motorcycle);
             return motorcycle;
         }
 
         public async Task UpdateAsync(int id, Motorcycle motorcycle)
         {
             motorcycle.Id = id;
-            _context.Motorcycles.Update(motorcycle);
-            await _context.SaveChangesAsync();
+            await _repository.UpdateAsync(motorcycle);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var motorcycle = await GetByIdAsync(id);
-            if (motorcycle is null) return;
-
-            _context.Motorcycles.Remove(motorcycle);
-            await _context.SaveChangesAsync();
+            await _repository.DeleteAsync(id);
         }
     }
 }

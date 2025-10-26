@@ -1,47 +1,50 @@
-using Microsoft.AspNetCore.Http;
-﻿// Controllers/PortalController.cs
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using OrganizedScannApi.Infrastructure.Data;
-using OrganizedScannApi.Application.DTOs;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using OrganizedScannApi.Domain.Repositories;
 
 namespace OrganizedScannApi.Api.Controllers
 {
     [ApiController]
     [Produces("application/json")]
-    [Route("api/portals")]
-        public class PortalController : ControllerBase
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
+    public class PortalController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IPortalRepository _repository;
 
-        public PortalController(ApplicationDbContext context)
+        public PortalController(IPortalRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         /// <summary>
-        /// Retorna resumo das motocicletas por portal.
+        /// Retorna todos os portais.
         /// </summary>
-        [HttpGet("summary")]
-        public async Task<ActionResult<List<PortalSummaryDTO>>> ListSummary()
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            var portals = await _context.Portals.ToListAsync();
-            var motorcycles = await _context.Motorcycles.Include(m => m.Portal).ToListAsync();
+            var portals = await _repository.GetAllAsync();
+            return Ok(portals);
+        }
 
-            var result = portals.Select(portal => new PortalSummaryDTO
-            {
-                PortalName = portal.Name,
-                MotorcycleCount = motorcycles.Count(m => m.PortalId == portal.Id),
-                MotorcyclePlates = motorcycles
-                    .Where(m => m.PortalId == portal.Id)
-                    .Select(m => m.LicensePlate)
-                    .ToList()
-            }).ToList();
+        /// <summary>
+        /// Retorna portal pelo ID.
+        /// </summary>
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(long id)
+        {
+            var portal = await _repository.GetByIdAsync(id);
+            if (portal == null) return NotFound();
+            return Ok(portal);
+        }
 
-            return Ok(result);
+        /// <summary>
+        /// Cria um novo portal.
+        /// </summary>
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] OrganizedScannApi.Domain.Entities.Portal portal)
+        {
+            await _repository.AddAsync(portal);
+            return CreatedAtAction(nameof(GetById), new { id = portal.Id }, portal);
         }
     }
 }

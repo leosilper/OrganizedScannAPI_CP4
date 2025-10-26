@@ -1,16 +1,14 @@
 using Microsoft.AspNetCore.Http;
-﻿// Controllers/MotorcycleController.cs
 using Microsoft.AspNetCore.Mvc;
 using OrganizedScannApi.Domain.Entities;
 using OrganizedScannApi.Application.UseCases.Motorcycles;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace OrganizedScannApi.Api.Controllers
 {
     [ApiController]
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     public class MotorcycleController : ControllerBase
     {
         private readonly MotorcycleService _service;
